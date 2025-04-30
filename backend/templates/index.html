@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bias-Free News Analyzer</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bias-Free News Analyzer</h1>
+      <p class="subtitle">Analyze news articles for bias and get neutral rewrites</p>
+    </header>
+
+    <!-- URL Submission Form -->
+    <form id="analyze-form">
+      <input type="url" id="url-input" placeholder="Paste news article URL here..." required />
+      <button type="submit">
+        <i class="fas fa-search"></i> Analyze
+      </button>
+    </form>
+
+    <!-- Loading Indicator -->
+    <div id="loader" style="display: none;">
+      <div class="spinner"></div>
+      <p>Analyzing article for bias...</p>
+    </div>
+
+    <!-- Results Section -->
+    <div id="result" style="display: none;">
+      <div class="article-header">
+        <div>
+          <h2 id="article-title">Article Title</h2>
+          <div class="article-meta">
+            <span class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span id="article-date">Unknown date</span>
+            </span>
+            <span class="meta-item">
+              <i class="fas fa-newspaper"></i>
+              <span id="article-source">Unknown source</span>
+            </span>
+          </div>
+        </div>
+        <div class="bias-score" id="bias-score">0</div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">
+          <i class="fas fa-file-alt"></i> Original Text
+        </h3>
+        <div class="box">
+          <div id="original-text" class="text-content">Loading content...</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">
+          <i class="fas fa-magic"></i> Neutral Rewrite
+        </h3>
+        <div class="box">
+          <div id="rewritten-text" class="text-content">Generating neutral version...</div>
+        </div>
+      </div>
+
+      <!-- Search Button -->
+      <div class="section">
+        <h3 class="section-title">
+          <i class="fas fa-search-plus"></i> Find Alternative Perspectives
+        </h3>
+        <div class="search-links">
+          <button type="button" class="search-btn" onclick="searchGoogle()">
+            <i class="fab fa-google"></i> Search Google News
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+echo "web: python backend/app.py" > Procfile
+
